@@ -64,12 +64,12 @@ public class Parameter_Collections {
 //	public static String URL_UPDATE = "http://www.rcs-indonesia.com/htc/api/update.php?";
 
 	//INDSAT LINK
-	public static String URL_GAMBAR = "http://verificare-tradein.com/files/original/";
-	public static String URL_GAMBAR_THUMB = "http://verificare-tradein.com/files/thumbnail/";
-	public static String URL_LOGIN = "http:/verificare-tradein.com/api/login.php?";
-	public static String URL_GET = "http://verificare-tradein.com/api/get.php?";
-	public static String URL_INSERT = "verificare-tradein.com/api/insert.php?";
-	public static String URL_UPDATE = "verificare-tradein.com/api/update.php?";
+	public static String URL_GAMBAR = "http://www.verificare-tradein.com/files/original/";
+	public static String URL_GAMBAR_THUMB = "http://www.verificare-tradein.com/files/thumbnail/";
+	public static String URL_LOGIN = "http://www.verificare-tradein.com/api/login.php?";
+	public static String URL_GET = "http://www.verificare-tradein.com/api/get.php?";
+	public static String URL_INSERT = "http://www.verificare-tradein.com/api/insert.php?";
+	public static String URL_UPDATE = "http://www.verificare-tradein.com/api/update.php?";
 	
 //	public static String URL_GAMBAR = "http://128.199.163.18/htc/files/original/";	
 //	public static String URL_GAMBAR_THUMB = "http://128.199.163.18/htc/files/thumbnail/";
