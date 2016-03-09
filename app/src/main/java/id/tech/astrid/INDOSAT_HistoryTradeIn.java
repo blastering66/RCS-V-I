@@ -48,7 +48,7 @@ public class INDOSAT_HistoryTradeIn extends AppCompatActivity {
     }
 
     private class AsyncTask_GetHistory_TradeIn extends AsyncTask<Void,Void, Void>{
-        private String cCode;
+        private String cCode, temp;
         private List<RowData_History_TradeIn> objects;
         DialogFragmentProgress dialogProgress;
 
@@ -65,6 +65,7 @@ public class INDOSAT_HistoryTradeIn extends AppCompatActivity {
             ServiceHandlerJSON sh = new ServiceHandlerJSON();
 
             JSONObject jObj = sh.json_get_history_tradein(id_pegawai);
+            temp = jObj.toString();
 
             try {
                 cCode = jObj.getString(Parameter_Collections.TAG_JSON_CODE);
@@ -100,7 +101,8 @@ public class INDOSAT_HistoryTradeIn extends AppCompatActivity {
 
                 lv.setAdapter(adapter);
             }else{
-                Toast.makeText(getApplicationContext(), "Something Wrong, Please check Internet or Web Admin", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "Something Wrong, Please check Internet or Web Admin", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Something Wrong = " + temp, Toast.LENGTH_LONG).show();
             }
         }
     }
