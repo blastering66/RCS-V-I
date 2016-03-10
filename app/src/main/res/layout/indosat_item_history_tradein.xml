@@ -45,6 +45,7 @@
             android:layout_centerVertical="true"
             android:singleLine="true"
             android:ellipsize="end"
+            android:textColor="@color/dark_slate_gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -52,6 +53,7 @@
             android:id="@+id/tv_plan"
             android:textSize="@dimen/size_text_standard"
             android:layout_alignParentRight="true"
+            android:textColor="@color/dark_slate_gray"
             android:layout_centerVertical="true"
             android:singleLine="true"
             android:ellipsize="end"

@@ -285,13 +285,13 @@ public class ScanAbsen_Activity extends FragmentActivity implements
             try {
                 c = jObj.getString(Parameter_Collections.TAG_ROWCOUNT);
 
-//                JSONObject jsonData = jObj.getJSONObject(Parameter_Collections.TAG_DATA);
-//                String id_toko = jsonData.getString(Parameter_Collections.TAG_ID_TOKO);
+                JSONObject jsonData = jObj.getJSONObject(Parameter_Collections.TAG_DATA);
+                String id_toko = jsonData.getString(Parameter_Collections.TAG_ID_TOKO);
 
                 sh_pf.edit()
                         .putString(Parameter_Collections.SH_KODE_TOKO, code)
                         .commit();
-//                sh_pf.edit().putString(Parameter_Collections.SH_ID_TOKO, id_toko).commit();
+                sh_pf.edit().putString(Parameter_Collections.SH_ID_TOKO, id_toko).commit();
 
                 if (extra_kode_absensi.equals("1")) {
                     sh_pf.edit()
