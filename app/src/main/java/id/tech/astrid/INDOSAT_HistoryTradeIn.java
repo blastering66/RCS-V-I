@@ -101,8 +101,8 @@ public class INDOSAT_HistoryTradeIn extends AppCompatActivity {
 
                 lv.setAdapter(adapter);
             }else{
-//                Toast.makeText(getApplicationContext(), "Something Wrong, Please check Internet or Web Admin", Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(), "Something Wrong = " + temp, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Something Wrong, Please check Internet or Web Admin", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "Something Wrong = " + temp, Toast.LENGTH_LONG).show();
             }
         }
     }
