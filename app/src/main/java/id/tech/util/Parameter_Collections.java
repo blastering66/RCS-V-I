@@ -140,7 +140,7 @@ public class Parameter_Collections {
 	public static String KIND_UPDATE_INFOTOKO = "data_toko";
 	
 	public static String KIND_ISSUE = "issue";
-	public static String KIND_UPDATE_BRAND = "update_branding";
+	public static String KIND_UPDATE_BRAND = "tradein";
 	public static String KIND_TAMBAHFOTO_TOKO = "image_toko";
 	public static String KIND_PIC_PROFILE = "pegawai";
 	public static String KIND_TARGET = "achievement";
