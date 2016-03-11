@@ -72,6 +72,11 @@
             android:screenOrientation="portrait"></activity>
 
         <activity
+            android:name="id.tech.astrid.INDOSAT_GalleryUpload_Standalone"
+            android:theme="@style/ToolBarStyle"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
             android:name="id.tech.astrid.INDOSAT_HistoryTradeIn"
             android:theme="@style/ToolBarStyle"
             android:screenOrientation="portrait"></activity>

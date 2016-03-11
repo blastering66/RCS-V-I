@@ -96,17 +96,6 @@ public class INDOSAT_GalleryUpload extends ActionBarActivity {
 		ed_tgl_mulai = (EditText)findViewById(R.id.ed_tgl_mulai);
 
 		btn = (Button) findViewById(R.id.btn);
-		btn_Submit= (Button) findViewById(R.id.btn_submit);
-
-		btn_Submit.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-//				new Async_SubmitIssue().execute();
-			}
-		});
-		
 		btn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -114,10 +103,9 @@ public class INDOSAT_GalleryUpload extends ActionBarActivity {
 				// TODO Auto-generated method stub
 				Intent upload = new Intent(getApplicationContext(),
 						UploadImageDialog.class);
+//				Intent upload = new Intent(getApplicationContext(),
+//						INDOSAT_GalleryUpload_Standalone.class);
 				startActivityForResult(upload, CODE_UPLOAD);
-				// adapter = new CustomAdapter_Img(getApplicationContext(), 0,
-				// 0, data);
-
 			}
 		});
 		
@@ -164,8 +152,8 @@ public class INDOSAT_GalleryUpload extends ActionBarActivity {
 			GPSTracker gps = new GPSTracker(getApplicationContext());
 			if (gps.canGetLocation()) {
 				double latitude = gps.getLatitude();
-				double longitude = gps.getLongitude();			
-				
+				double longitude = gps.getLongitude();
+
 				spf.edit().putString(Parameter_Collections.TAG_LONGITUDE_NOW, String.valueOf(longitude)).commit();
 				spf.edit().putString(Parameter_Collections.TAG_LATITUDE_NOW, String.valueOf(latitude)).commit();
 				
@@ -176,7 +164,6 @@ public class INDOSAT_GalleryUpload extends ActionBarActivity {
 							"No Internet Connection, Cek Your Network",
 							Toast.LENGTH_LONG).show();
 				}
-				
 
 			} else {
 				
@@ -193,8 +180,6 @@ public class INDOSAT_GalleryUpload extends ActionBarActivity {
 						"Can not get your location now, Sent your last locations",
 						Toast.LENGTH_LONG).show();
 			}
-			
-			
 			break;
 
 		default:
