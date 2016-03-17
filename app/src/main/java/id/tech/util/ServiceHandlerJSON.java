@@ -419,7 +419,10 @@ public class ServiceHandlerJSON {
 	public JSONObject trade_in(String id_plan , String id_toko , String tradein_period, String id_pegawai ,
 										String tradein_customername , String tradein_oldbrandname , String tradein_newbrandname ,
 										String tradein_oldimei , String tradein_noidentitas, String tradein_harga ,
-										String latitude_tradein , String longitude_tradein){
+										String latitude_tradein , String longitude_tradein,
+							   String cTotalcashout , String cBank,
+							   String cApprovalcode , String cSalesperson,
+							   String cNewimei , String cNewmsisdn){
 		try{
 			params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair(Parameter_Collections.KIND, Parameter_Collections.KIND_TRADEIN));
@@ -435,6 +438,13 @@ public class ServiceHandlerJSON {
 			params.add(new BasicNameValuePair(Parameter_Collections.TAG_TRADE_HARGA, tradein_harga));
 			params.add(new BasicNameValuePair(Parameter_Collections.TAG_TRADE_LATI, latitude_tradein));
 			params.add(new BasicNameValuePair(Parameter_Collections.TAG_TRADE_LONGI, longitude_tradein));
+
+			params.add(new BasicNameValuePair("tradein_totalcashout", cTotalcashout));
+			params.add(new BasicNameValuePair("tradein_bank", cBank));
+			params.add(new BasicNameValuePair("tradein_approvalcode", cApprovalcode));
+			params.add(new BasicNameValuePair("tradein_salesperson", cSalesperson));
+			params.add(new BasicNameValuePair("tradein_newimei", cNewimei));
+			params.add(new BasicNameValuePair("tradein_newmsisdn", cNewmsisdn));
 
 			url = Parameter_Collections.URL_INSERT+ URLEncodedUtils.format(params, Parameter_Collections.UTF);
 

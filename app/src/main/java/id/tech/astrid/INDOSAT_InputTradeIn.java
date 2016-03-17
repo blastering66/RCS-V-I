@@ -36,6 +36,8 @@ import id.tech.util.ServiceHandlerJSON;
 public class INDOSAT_InputTradeIn extends ActionBarActivity {
     private EditText ed_Nama, ed_Nomor_Iden, ed_Perangkat_Merk, ed_Perangkat_IMEI, ed_Perangkat_Harga,
             ed_Perangkat_Update, ed_Plan;
+    //revisi
+    private EditText ed_Totalcashout, ed_Bank, ed_Approvalcode,ed_Salesperson,ed_Newimei, ed_Newmsisdn;
     private Spinner spinner_Plan, spinner_Kontrak;
     private Button btn;
     private HashMap<String, String> data_plan;
@@ -172,6 +174,7 @@ public class INDOSAT_InputTradeIn extends ActionBarActivity {
         private String cNama, cIdentitas, cOldBrand, cHarga, cImei, cNewBrand, cId_Pegawai,
                 cLati, cLongi, cId_Toko;
         private String latitude,longitude, cCode;
+        private String cTotalcashout, cBank, cApprovalcode,cSalesperson,cNewimei, cNewmsisdn;
         DialogFragmentProgress dialogProgress;
 
         @Override
@@ -188,6 +191,12 @@ public class INDOSAT_InputTradeIn extends ActionBarActivity {
             cImei = ed_Perangkat_IMEI.getText().toString();
             cNewBrand = ed_Perangkat_Update.getText().toString();
 
+            cTotalcashout= ed_Totalcashout.getText().toString();
+            cBank= ed_Bank.getText().toString();
+            cApprovalcode= ed_Approvalcode.getText().toString();
+            cSalesperson= ed_Salesperson.getText().toString();
+            cNewimei= ed_Newimei.getText().toString();
+            cNewmsisdn= ed_Newmsisdn.getText().toString();
 
             cLati = spf.getString(Parameter_Collections.TAG_LATITUDE_NOW, "0.0");
             cLongi = spf.getString(Parameter_Collections.TAG_LONGITUDE_NOW, "0.0");
@@ -199,7 +208,8 @@ public class INDOSAT_InputTradeIn extends ActionBarActivity {
         protected Void doInBackground(Void... params) {
             ServiceHandlerJSON sh = new ServiceHandlerJSON();
 
-            JSONObject jObj = sh.trade_in(cPlan,cId_Toko, cKontrak,id_pegawai,cNama,cOldBrand,cNewBrand,cImei,cIdentitas,cHarga,cLati,cLongi);
+            JSONObject jObj = sh.trade_in(cPlan,cId_Toko, cKontrak,id_pegawai,cNama,cOldBrand,cNewBrand,cImei,cIdentitas,cHarga,cLati,cLongi,
+                    cTotalcashout, cBank, cApprovalcode,cSalesperson,cNewimei, cNewmsisdn);
             try {
                 cCode = jObj.getString(Parameter_Collections.TAG_JSON_CODE);
             }catch (JSONException e){
@@ -233,6 +243,13 @@ public class INDOSAT_InputTradeIn extends ActionBarActivity {
         ed_Perangkat_Harga = (EditText) findViewById(R.id.ed_perangkat_harga);
         ed_Perangkat_Update = (EditText) findViewById(R.id.ed_perangkat_baru);
 //        ed_Plan = (EditText) findViewById(R.id.ed_nama);
+        ed_Totalcashout = (EditText) findViewById(R.id.ed_totalcashout);
+        ed_Bank = (EditText) findViewById(R.id.ed_bank);
+        ed_Approvalcode = (EditText) findViewById(R.id.ed_approvalcode);
+        ed_Salesperson = (EditText) findViewById(R.id.ed_salesperson);
+        ed_Newimei = (EditText) findViewById(R.id.ed_newimei);
+        ed_Newmsisdn = (EditText) findViewById(R.id.ed_newmsisdn);
+
         spinner_Plan = (Spinner) findViewById(R.id.spinner_plan);
         spinner_Kontrak = (Spinner) findViewById(R.id.spinner_kontrak);
 
