@@ -14,10 +14,10 @@ public class Parameter_Collections {
 //	public static String URL_FOLDER_IMG_ABSENSI = "/HTC/images/absensi";
 //	public static String URL_FOLDER_IMG_PENJUALAN = "/HTC/images/penjualan";
 //	public static String URL_FOLDER_IMG_PRODUK = "/HTC/images/produk";
-	public static String URL_FOLDER_IMG_ISSUE = "/ACER/images/indosat";
-	public static String URL_FOLDER_IMG_ABSENSI = "/ACER/images/absensi";
-	public static String URL_FOLDER_IMG_PENJUALAN = "/ACER/images/penjualan";
-	public static String URL_FOLDER_IMG_PRODUK = "/ACER/images/produk";
+	public static String URL_FOLDER_IMG_ISSUE = "/TRADEIN/images/indosat";
+	public static String URL_FOLDER_IMG_ABSENSI = "/TRADEIN/images/absensi";
+	public static String URL_FOLDER_IMG_PENJUALAN = "/TRADEIN/images/penjualan";
+	public static String URL_FOLDER_IMG_PRODUK = "/TRADEIN/images/produk";
 	
 
 	public static String SH_NAME = "htc";
@@ -67,12 +67,12 @@ public class Parameter_Collections {
 //	public static String URL_UPDATE = "http://www.rcs-indonesia.com/htc/api/update.php?";
 
 	//INDSAT LINK
-	public static String URL_GAMBAR = "http://www.verificare-tradein.com/files/original/";
-	public static String URL_GAMBAR_THUMB = "http://www.verificare-tradein.com/files/thumbnail/";
-	public static String URL_LOGIN = "http://www.verificare-tradein.com/api/login.php?";
-	public static String URL_GET = "http://www.verificare-tradein.com/api/get.php?";
-	public static String URL_INSERT = "http://www.verificare-tradein.com/api/insert.php?";
-	public static String URL_UPDATE = "http://www.verificare-tradein.com/api/update.php?";
+	public static String URL_GAMBAR = "http://www.oig-tradein.com/files/original/";
+	public static String URL_GAMBAR_THUMB = "http://www.oig-tradein.com/files/thumbnail/";
+	public static String URL_LOGIN = "http://www.oig-tradein.com/api/login.php?";
+	public static String URL_GET = "http://www.oig-tradein.com/api/get.php?";
+	public static String URL_INSERT = "http://www.oig-tradein.com/api/insert.php?";
+	public static String URL_UPDATE = "http://www.oig-tradein.com/api/update.php?";
 	
 //	public static String URL_GAMBAR = "http://128.199.163.18/htc/files/original/";	
 //	public static String URL_GAMBAR_THUMB = "http://128.199.163.18/htc/files/thumbnail/";
